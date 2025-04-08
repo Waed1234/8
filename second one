@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] words = { "Cat", "Dog", "Car", "Pizza", "Hat", "Fish", "Tree", "Monkey", "Ball", "Bird" };
+        Random rand = new Random();
+        string sentence = "";
+        int count = 0;
+
+        while (count < 7)
+        {
+            int index = rand.Next(words.Length); // Random index from 0 to 9
+            sentence += words[index] + " ";
+            count++;
+
+        }
+
+        Console.WriteLine("Funny sentence:");
+        Console.WriteLine(sentence.Trim() + ".");
+    }
+}
