@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Random rand = new Random();
+        while (true)
+        {
+            int number = rand.Next(1, 21); // Generates a number from 1 to 20
+            if (number == 5)
+            {
+                continue; // Skip printing number 5
+            }
+
+            Console.WriteLine("Generated number: " + number);
+
+            if (number == 15)
+            {
+                break; // Exit the loop if number is 15
+            }
+        }
+
+        Console.WriteLine("Loop exited.");
+    }
+}
